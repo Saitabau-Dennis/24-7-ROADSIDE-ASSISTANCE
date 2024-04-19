@@ -52,6 +52,11 @@ class RegistrationPage extends StatelessWidget {
                 ),
                 TextField(
                   decoration: const InputDecoration(
+                    labelText: 'Confirm Password',
+                  ),
+                ),
+                TextField(
+                  decoration: const InputDecoration(
                     labelText: 'Email',
                   ),
                 ),
