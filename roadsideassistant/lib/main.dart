@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Road Side Assistant',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue),
+        colorScheme: const ColorScheme.light(), // Use ColorScheme.light() here
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: '/',
@@ -24,6 +23,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class RegistrationPage extends StatelessWidget {
   const RegistrationPage({Key? key}) : super(key: key);
 
@@ -31,10 +31,11 @@ class RegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Registration Page'),
+        centerTitle: true,
+        title: const Text('Create an account'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20), // Add margin of 20px on the x-axis
+        padding: const EdgeInsets.symmetric(horizontal: 400), // Add margin of 20px on the x-axis
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -65,22 +66,58 @@ class RegistrationPage extends StatelessWidget {
                     labelText: 'Phone Number',
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    // Perform registration logic here
-                  },
-                  child: const Text('Register'),
+               Container(
+                width: 200,
+                margin: EdgeInsets.only(top: 10),
+                child:
+                  ElevatedButton(
+                    onPressed: () {
+                      // Perform registration logic here
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green, // Set the background color to green
+                    ),
+                    child: const Text('Register'),
+                  ),
+               ),
+               Container(
+               
+                margin: EdgeInsets.only(top: 10),
+              
+               child: Text(
+                  'Or',
+                  style: TextStyle(fontSize: 20,),
+
+                  ),
+                  ),
+                  Container(
+                    width: 200,
+                     margin: const EdgeInsets.only(top: 10),
+                     child:ElevatedButton(
+                  onPressed: (){
+
+                  }, 
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
+                  child: const Text('Continue with Google'),
                 ),
+                  ),
                 const SizedBox(height: 16),
                 GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, '/login');
                   },
-                  child: const Text(
-                    'Already have an account? Log in',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      decoration: TextDecoration.underline,
+                  child: Container(
+                   
+                    padding: const EdgeInsets.all(8),
+                    child: const Text(
+                      'Already have an account? Log in',
+                      style: TextStyle(
+                        color: Colors.black,
+                        decoration: TextDecoration.none,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ),
@@ -100,6 +137,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Login Page'),
       ),
       body: Padding(
