@@ -190,7 +190,16 @@ class LoginPage extends StatelessWidget {
                 ),
                 ),
                  const Text(
-                  'Or'
+                  'Or',
+                  style: TextStyle(fontSize: 16,),
+                ),
+                Container(
+                 margin: const EdgeInsets.all(10),               
+                  child: ElevatedButton(
+                    onPressed:() {
+                  },
+                   child: const Text('Continue with google'),
+                  )
                 ),
                 Container(
                   margin: const EdgeInsets.all(10),
@@ -202,7 +211,7 @@ class LoginPage extends StatelessWidget {
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.green,
                   ),
-                  child: const Text('Continue with Google'),
+                  child: const Text("You don't have an account? sign up!"),
                 ),
                 ),
 
