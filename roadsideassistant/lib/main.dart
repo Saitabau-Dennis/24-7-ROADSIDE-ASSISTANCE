@@ -43,6 +43,9 @@ class RegistrationPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                 Container(
+                  margin: const EdgeInsets.all(5),
+                  child:
                const TextField(
                   decoration: InputDecoration(
                    hintText: 'Full Name',
@@ -52,6 +55,11 @@ class RegistrationPage extends StatelessWidget {
                    )
                   ),
                 ),
+                 ),
+            
+                  Container(
+                  margin: const EdgeInsets.all(5),
+                  child:
                 const TextField(
                   decoration: InputDecoration(
                     hintText: 'Password',
@@ -61,6 +69,11 @@ class RegistrationPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                  ), 
+
+                 Container(
+                  margin: const EdgeInsets.all(5),
+                  child:
                const TextField(
                   decoration: InputDecoration(
                     labelText: 'Confirm Password',
@@ -70,7 +83,10 @@ class RegistrationPage extends StatelessWidget {
                     )
                   ),
                 ),
-                const TextField(
+                 ),
+                 Container(
+                  margin: const EdgeInsets.all(5),
+                  child: const TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
                     hintText: 'Enter your email',
@@ -79,7 +95,11 @@ class RegistrationPage extends StatelessWidget {
                     )
                   ),
                 ),
-                const TextField(
+                 ),
+                Container(
+                  margin: const EdgeInsets.all(5),
+
+                child: const TextField(
                   decoration: InputDecoration(
                     hintText: 'Phone number',
                     labelText: 'Phone Number',
@@ -87,6 +107,7 @@ class RegistrationPage extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                     ),
                   ),
+                ),
                 ),
                Container(
                 width: 200,
@@ -106,7 +127,7 @@ class RegistrationPage extends StatelessWidget {
                
                 margin: EdgeInsets.only(top: 10),
               
-               child: Text(
+               child: const Text(
                   'Or',
                   style: TextStyle(fontSize: 20,),
 
