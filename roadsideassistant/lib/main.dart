@@ -1,3 +1,5 @@
+import 'dart:ui_web';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -163,7 +165,7 @@ class LoginPage extends StatelessWidget {
                
                 Container(
                   margin: const EdgeInsets.all(10),
-                  width: 350,
+                  width: 400,
                   child:
                 const TextField(
                   decoration: InputDecoration(
@@ -178,6 +180,8 @@ class LoginPage extends StatelessWidget {
 
                 Container(
                   margin: const EdgeInsets.all(10),
+                  width: 400,
+                  
                 child: ElevatedButton(
                   onPressed: () {
                     // Perform login logic here
@@ -185,7 +189,8 @@ class LoginPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
                   ),
-                  child: const Text('Log in'),
+                  child: const Text('Log in',
+                  style: TextStyle(color: Colors.white),),
                   
                 ),
                 ),
@@ -194,6 +199,7 @@ class LoginPage extends StatelessWidget {
                   style: TextStyle(fontSize: 16,),
                 ),
                 Container(
+                  width: 400,
                  margin: const EdgeInsets.all(10),               
                   child: ElevatedButton(
                     onPressed:() {
@@ -201,10 +207,15 @@ class LoginPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
                   ),
-                   child: const Text('Continue with google'),
+                   
+                   child: const Text('Continue with google',
+                   style: TextStyle(color: Colors.white),
+                   
+                   ),
                   )
                 ),
                 Container(
+
                   margin: const EdgeInsets.all(10),
              
                 child: TextButton(
@@ -212,7 +223,8 @@ class LoginPage extends StatelessWidget {
                     Navigator.pushNamed(context, '/');
                   },
                   
-                  child: const Text("You don't have an account? sign up!"),
+                  child: const Text("You don't have an account? sign up!",
+                  style: TextStyle(),),
                 ),
                 ),
 
