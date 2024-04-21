@@ -179,7 +179,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Login Page'),
+        title: const Text('Login'),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 400), // Add margin of 20px on the x-axis
