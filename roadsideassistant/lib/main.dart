@@ -148,7 +148,7 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 300,
+                  width: 400,
                   child:
                 const TextField(
                   decoration: InputDecoration(
@@ -163,7 +163,7 @@ class LoginPage extends StatelessWidget {
                
                 Container(
                   margin: const EdgeInsets.all(10),
-                  width: 300,
+                  width: 350,
                   child:
                 const TextField(
                   decoration: InputDecoration(
@@ -198,6 +198,9 @@ class LoginPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed:() {
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
                    child: const Text('Continue with google'),
                   )
                 ),
