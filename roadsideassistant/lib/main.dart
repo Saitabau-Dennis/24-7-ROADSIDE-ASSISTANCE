@@ -147,29 +147,65 @@ class LoginPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextField(
-                  decoration: const InputDecoration(
-                    labelText: 'Email',
+                Container(
+                  width: 300,
+                  child:
+                const TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter your email',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                    )
                   ),
                 ),
-                TextField(
-                  decoration: const InputDecoration(
-                    labelText: 'Password',
+                ),
+               
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  width: 300,
+                  child:
+                const TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter your password',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.all(Radius.circular(12))
+                    ),
                   ),
                 ),
-                ElevatedButton(
+                ),
+
+                Container(
+                  margin: const EdgeInsets.all(10),
+                child: ElevatedButton(
                   onPressed: () {
                     // Perform login logic here
                   },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
                   child: const Text('Log in'),
+                  
                 ),
-                const SizedBox(height: 16),
-                TextButton(
+                ),
+                 const Text(
+                  'Or'
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+             
+                child: TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/');
                   },
-                  child: const Text('Go to Registration'),
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.green,
+                  ),
+                  child: const Text('Continue with Google'),
                 ),
+                ),
+
               ],
             ),
           ),
