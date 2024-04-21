@@ -1,5 +1,3 @@
-import 'dart:ui_web';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,8 +17,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => RegistrationPage(),
-        '/login': (context) => LoginPage(),
+        '/': (context) => const RegistrationPage(),
+        '/login': (context) => const LoginPage(),
       },
     );
   }
@@ -125,7 +123,7 @@ class RegistrationPage extends StatelessWidget {
                ),
                Container(
                
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
               
                child: const Text(
                   'Or',
