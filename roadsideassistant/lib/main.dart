@@ -211,9 +211,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, '/');
                   },
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.green,
-                  ),
+                  
                   child: const Text("You don't have an account? sign up!"),
                 ),
                 ),
