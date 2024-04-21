@@ -46,6 +46,7 @@ class RegistrationPage extends StatelessWidget {
                const TextField(
                   decoration: InputDecoration(
                    hintText: 'Full Name',
+                   labelText: 'Full Name',
                    border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(12)),
                    )
@@ -54,6 +55,7 @@ class RegistrationPage extends StatelessWidget {
                 const TextField(
                   decoration: InputDecoration(
                     hintText: 'Password',
+                    labelText: 'password',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                     ),
@@ -62,21 +64,33 @@ class RegistrationPage extends StatelessWidget {
                const TextField(
                   decoration: InputDecoration(
                     labelText: 'Confirm Password',
+                    hintText: 'Confirm password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12))
+                    )
                   ),
                 ),
                 const TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
+                    hintText: 'Enter your email',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12))
+                    )
                   ),
                 ),
                 const TextField(
                   decoration: InputDecoration(
+                    hintText: 'Phone number',
                     labelText: 'Phone Number',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                    ),
                   ),
                 ),
                Container(
                 width: 200,
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
                 child:
                   ElevatedButton(
                     onPressed: () {
