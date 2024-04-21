@@ -141,7 +141,7 @@ class LoginPage extends StatelessWidget {
         title: const Text('Login Page'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20), // Add margin of 20px on the x-axis
+        padding: const EdgeInsets.symmetric(horizontal: 400), // Add margin of 20px on the x-axis
         child: Center(
           child: SingleChildScrollView(
             child: Column(
