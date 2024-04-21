@@ -43,28 +43,34 @@ class RegistrationPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextField(
-                  decoration: const InputDecoration(
-                    labelText: 'Name',
+               const TextField(
+                  decoration: InputDecoration(
+                   hintText: 'Full Name',
+                   border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                   )
                   ),
                 ),
-                TextField(
-                  decoration: const InputDecoration(
-                    labelText: 'Password',
+                const TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Password',
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                    ),
                   ),
                 ),
-                TextField(
-                  decoration: const InputDecoration(
+               const TextField(
+                  decoration: InputDecoration(
                     labelText: 'Confirm Password',
                   ),
                 ),
-                TextField(
-                  decoration: const InputDecoration(
+                const TextField(
+                  decoration: InputDecoration(
                     labelText: 'Email',
                   ),
                 ),
-                TextField(
-                  decoration: const InputDecoration(
+                const TextField(
+                  decoration: InputDecoration(
                     labelText: 'Phone Number',
                   ),
                 ),
