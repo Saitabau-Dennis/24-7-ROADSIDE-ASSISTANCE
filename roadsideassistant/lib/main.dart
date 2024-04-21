@@ -224,7 +224,7 @@ class LoginPage extends StatelessWidget {
                   },
                   
                   child: const Text("You don't have an account? sign up!",
-                  style: TextStyle(),),
+                  style: TextStyle(color: Colors.black),),
                 ),
                 ),
 
