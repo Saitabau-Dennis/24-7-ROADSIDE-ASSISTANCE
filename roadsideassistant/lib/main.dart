@@ -1,8 +1,17 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'pages/Splash_screen.dart';
+// import 'package:firebase_core/firebase_core.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Add a delay to simulate a splash screen for 2 seconds
+  await Future.delayed(const Duration(seconds: 2));
+  //splashscreen
+  
 
-void main() {
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -17,7 +26,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const RegistrationPage(),
+        '/': (context) => const RegistrationPage(),  // Display SplashScreen initially
+        '/registration': (context) => const RegistrationPage(),
         '/login': (context) => const LoginPage(),
       },
     );
@@ -25,7 +35,7 @@ class MyApp extends StatelessWidget {
 }
 
 class RegistrationPage extends StatelessWidget {
-  const RegistrationPage({Key? key}) : super(key: key);
+  const RegistrationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +45,7 @@ class RegistrationPage extends StatelessWidget {
         title: const Text('Create an account'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 400), // Add margin of 20px on the x-axis
+        padding: const EdgeInsets.symmetric(horizontal: 40), // Add margin of 20px on the x-axis
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -172,7 +182,7 @@ class RegistrationPage extends StatelessWidget {
 }
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -182,7 +192,7 @@ class LoginPage extends StatelessWidget {
         title: const Text('Login'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 400), // Add margin of 20px on the x-axis
+        padding: const EdgeInsets.symmetric(horizontal: 40), // Add margin of 20px on the x-axis
         child: Center(
           child: SingleChildScrollView(
             child: Column(
