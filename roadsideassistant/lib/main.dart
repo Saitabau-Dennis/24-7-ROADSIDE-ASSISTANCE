@@ -213,7 +213,7 @@ class LoginPage extends StatelessWidget {
                 ),
                
                 Container(
-                  margin: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.only(top: 10),
                   width: 400,
                   child:
                 const TextField(
