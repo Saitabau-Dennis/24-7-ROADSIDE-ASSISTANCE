@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'pages/Splash_screen.dart';
 // import 'package:firebase_core/firebase_core.dart';
 Future<void> main() async {
@@ -7,9 +8,7 @@ Future<void> main() async {
   // Add a delay to simulate a splash screen for 2 seconds
   await Future.delayed(const Duration(seconds: 2));
   //splashscreen
-  
-
-  runApp(const MyApp());
+   runApp(const MyApp());
 }
 
 
@@ -128,7 +127,8 @@ class RegistrationPage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.green, // Set the background color to green
                     ),
-                    child: const Text('Register'),
+                    child: const Text('Register',
+                    style: TextStyle(color: Colors.white),),
                   ),
                ),
                Container(
@@ -151,7 +151,8 @@ class RegistrationPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
                   ),
-                  child: const Text('Continue with Google'),
+                  child: const Text('Continue with Google',
+                  style: TextStyle(color: Colors.white),),
                 ),
                   ),
                 const SizedBox(height: 16),
