@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
   final Widget? child;
-  const SplashScreen({Key? key, this.child}) : super(key: key);
+  const SplashScreen({super.key, this.child});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -24,13 +24,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Text(
-          'Welcome here',
+          'Welcome To Road Side Assistant',
           style: TextStyle(
-            color: Color.fromARGB(255, 146, 195, 1),
+            color: Colors.blue,
             fontWeight: FontWeight.bold,
+            fontSize: 70,
           ),
         ),
       ),

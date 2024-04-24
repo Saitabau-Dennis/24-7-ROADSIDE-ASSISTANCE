@@ -21,6 +21,7 @@ class LoginPage extends StatelessWidget {
                   child:
                 const TextField(
                   decoration: InputDecoration(
+                    labelText: 'Email',
                     hintText: 'Enter your email',
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black),
@@ -36,6 +37,7 @@ class LoginPage extends StatelessWidget {
                   child:
                 const TextField(
                   decoration: InputDecoration(
+                    labelText: 'Password ',
                     hintText: 'Enter your password',
                     border: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black),
