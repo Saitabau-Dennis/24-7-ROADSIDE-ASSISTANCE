@@ -1,14 +1,38 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class SplashScreen extends StatefulWidget {
+  final Widget? child;
+  const SplashScreen({Key? key, this.child}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(
+      const Duration(seconds: 5),
+      () => Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => widget.child!),
+        (route) => false,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-       child: Text('Welcome all',
-       style: TextStyle(color: Colors.blue, fontSize: 20,)), // You can replace this with your splash screen UI
+        child: Text(
+          'Welcome here',
+          style: TextStyle(
+            color: Color.fromARGB(255, 146, 195, 1),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
