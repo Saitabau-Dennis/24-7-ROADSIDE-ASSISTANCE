@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "178854411135",
+    "project_id": "rdhelp-ce0bc",
+    "storage_bucket": "rdhelp-ce0bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178854411135:android:e5fedc4f3043b6a609f84a",
+        "android_client_info": {
+          "package_name": "com.example.roadsideassistant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaaY6sDQM4jaS5WjIjiGt9X6b5EaWJUz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
