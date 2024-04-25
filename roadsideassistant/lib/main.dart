@@ -1,15 +1,11 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'pages/Splash_screen.dart';
 import 'pages/SignupPage.dart';
 import 'pages/loginPage.dart';
+import 'pages/home_page.dart';
 // import 'package:firebase_core/firebase_core.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Add a delay to simulate a splash screen for 2 seconds
-  await Future.delayed(const Duration(seconds: 2));
-  //splashscreen
    runApp(const MyApp());
 }
 
@@ -27,9 +23,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const SplashScreen(child: RegistrationPage(),),  // Display SplashScreen initially
-        '/registration': (context) => const RegistrationPage(),
-        '/login': (context) => const LoginPage(),
+        '/': (context) => const SplashScreen(child: HomePage()),
+        //'/': (context) => const RegistrationPage(),  // Display SplashScreen initially
+        //'/registration': (context) => const RegistrationPage(),
+        //'/login': (context) => const LoginPage(),
+        //'/home': (context) =>  const HomePage(),
       },
     );
   }
